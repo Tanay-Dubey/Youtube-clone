@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import LamaTube from "../img/logo.png";
+import Ellipsco from "../img/logo.png";
 import HomeIcon from "@mui/icons-material/Home";
 import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
 import SubscriptionsOutlinedIcon from "@mui/icons-material/SubscriptionsOutlined";
+import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import VideoLibraryOutlinedIcon from "@mui/icons-material/VideoLibraryOutlined";
 import HistoryOutlinedIcon from "@mui/icons-material/HistoryOutlined";
 import LibraryMusicOutlinedIcon from "@mui/icons-material/LibraryMusicOutlined";
@@ -90,8 +91,8 @@ const Menu = ({ darkMode, setDarkMode }) => {
       <Wrapper>
         <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
           <Logo>
-            <Img src={LamaTube} />
-            LamaTube
+            <Img src={Ellipsco} />
+            Ellipsco
           </Logo>
         </Link>
         <Item>
@@ -101,19 +102,26 @@ const Menu = ({ darkMode, setDarkMode }) => {
         <Link to="trends" style={{ textDecoration: "none", color: "inherit" }}>
           <Item>
             <ExploreOutlinedIcon />
-            Explore
+            Trending
           </Item>
         </Link>
         <Link
           to="subscriptions"
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
+          style={{ textDecoration: "none", color: "inherit" }}>
           <Item>
             <SubscriptionsOutlinedIcon />
-            Subscriptions
+            Following
           </Item>
         </Link>
-        <Hr />
+        <Link
+          to="subscriptions"
+          style={{ textDecoration: "none", color: "inherit" }}>
+          <Item>
+            <ThumbUpOutlinedIcon />
+            Liked Videos
+          </Item>
+        </Link>
+        {/* <Hr />
         <Item>
           <VideoLibraryOutlinedIcon />
           Library
@@ -178,7 +186,7 @@ const Menu = ({ darkMode, setDarkMode }) => {
         <Item onClick={() => setDarkMode(!darkMode)}>
           <SettingsBrightnessOutlinedIcon />
           {darkMode ? "Light" : "Dark"} Mode
-        </Item>
+        </Item> */}
       </Wrapper>
     </Container>
   );

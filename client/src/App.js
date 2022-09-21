@@ -27,7 +27,7 @@ function App() {
   const { currentUser } = useSelector((state) => state.user);
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={lightTheme}>
       <Container>
         <BrowserRouter>
           <Menu darkMode={darkMode} setDarkMode={setDarkMode} />
